@@ -1,0 +1,339 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* goeland
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-30 14:37+0000\n"
+"PO-Revision-Date: 2015-10-30 14:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: goeland
+#: model:ir.actions.act_window,help:goeland.thing_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first thing</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier objet générique</p>\n"
+"            "
+
+#. module: goeland
+#: model:ir.actions.act_window,help:goeland.arbre_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first tree</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier objet arbre</p>\n"
+"            "
+
+#. module: goeland
+#: selection:goeland.arbre,validation:0
+msgid "A replanter"
+msgstr "A replanter"
+
+#. module: goeland
+#: selection:goeland.arbre,validation:0
+msgid "A repositionner"
+msgstr "A repositionner"
+
+#. module: goeland
+#: view:goeland.thing:goeland.course_form_view
+#: view:goeland.thing:goeland.thing_search_view
+#: view:goeland.thing:goeland.thing_tree_view
+#: field:goeland.thing,isactive:0
+msgid "Active"
+msgstr "Actif"
+
+#. module: goeland
+#: field:goeland.arbre,idthing:0
+msgid "Base object"
+msgstr "Objet de base"
+
+#. module: goeland
+#: model:ir.ui.menu,name:goeland.things_menu
+msgid "Base objects"
+msgstr "Objets de base"
+
+#. module: goeland
+#: field:goeland.thing,dateconstruction:0
+msgid "Building date"
+msgstr "Date de construction"
+
+#. module: goeland
+#: field:goeland.arbre,circonference:0
+msgid "Circonference"
+msgstr "Circonference"
+
+#. module: goeland
+#: help:goeland.arbre,circonference:0
+msgid "Circumference in meters"
+msgstr "Circonférence en mètres"
+
+#. module: goeland
+#: field:goeland.arbre,revsurface:0
+msgid "Coating surface"
+msgstr "Revêtement de surface"
+
+#. module: goeland
+#: field:goeland.arbre,revsurfacerem:0
+msgid "Comment on coating surface"
+msgstr "Remarque sur le revêtement de surface"
+
+#. module: goeland
+#: field:goeland.arbre,entouragerem:0
+msgid "Comment on entourage"
+msgstr "Remarque sur l'entourage"
+
+#. module: goeland
+#: field:goeland.arbre,protectionrem:0
+msgid "Comment on protection"
+msgstr "Remarque sur la protection"
+
+#. module: goeland
+#: field:goeland.arbre,envracinairerem:0
+msgid "Comment on root environment"
+msgstr "Remarque sur l'environement racinaire"
+
+#. module: goeland
+#: field:goeland.arbre,substratrem:0
+msgid "Comment on substratum"
+msgstr "Remarque sur le substart"
+
+#. module: goeland
+#: field:goeland.arbre,create_uid:0
+#: field:goeland.thing,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: goeland
+#: field:goeland.arbre,create_date:0
+#: field:goeland.thing,create_date:0
+msgid "Created on"
+msgstr "Date de création"
+
+#. module: goeland
+#: field:goeland.arbre,diametrecouronne:0
+msgid "Crown diameter"
+msgstr "Diamètre de la couronne"
+
+#. module: goeland
+#: field:goeland.arbre,cultivar:0
+msgid "Cultivar"
+msgstr "Cultivar"
+
+#. module: goeland
+#: view:goeland.thing:goeland.course_form_view
+#: view:goeland.thing:goeland.thing_search_view
+#: view:goeland.thing:goeland.thing_tree_view
+#: field:goeland.thing,description:0
+msgid "Description"
+msgstr "Description"
+
+#. module: goeland
+#: selection:goeland.arbre,validation:0
+msgid "En attente dabattage"
+msgstr "En attente dabattage"
+
+#. module: goeland
+#: selection:goeland.arbre,validation:0
+msgid "En attente de remplacement"
+msgstr "En attente de remplacement"
+
+#. module: goeland
+#: selection:goeland.arbre,validation:0
+msgid "En attente de soin"
+msgstr "En attente de soin"
+
+#. module: goeland
+#: field:goeland.arbre,entourage:0
+msgid "Entourage"
+msgstr "Entourage"
+
+#. module: goeland
+#: selection:goeland.arbre,validation:0
+msgid "Existant"
+msgstr "Existant"
+
+#. module: goeland
+#: field:goeland.arbre,genre:0
+msgid "Genus"
+msgstr "Genre"
+
+#. module: goeland
+#: model:ir.ui.menu,name:goeland.main_goeland_menu
+msgid "Goeland"
+msgstr "Goéland"
+
+#. module: goeland
+#: field:goeland.arbre,etatsanitairecouronne:0
+msgid "Health status of crown"
+msgstr "Etat sanitaire de la couronne"
+
+#. module: goeland
+#: field:goeland.arbre,etatsanitairepied:0
+msgid "Health status of foot"
+msgstr "Etat sanitaire du pied"
+
+#. module: goeland
+#: field:goeland.arbre,etatsanitairetronc:0
+msgid "Health status of trunk"
+msgstr "Etat sanitaire du tronc"
+
+#. module: goeland
+#: field:goeland.arbre,hauteur:0
+msgid "Height"
+msgstr "Hauteur"
+
+#. module: goeland
+#: field:goeland.arbre,id:0
+#: field:goeland.thing,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: goeland
+#: field:goeland.thing,dateinactivation:0
+msgid "Inctivation date"
+msgstr "Date d'inactivation"
+
+#. module: goeland
+#: field:goeland.arbre,isincada:0
+msgid "Is in cadastre"
+msgstr "Cadastré"
+
+#. module: goeland
+#: field:goeland.thing,ishavingstory:0
+msgid "IsHavingStory"
+msgstr "A un historique?"
+
+#. module: goeland
+#: field:goeland.arbre,write_uid:0
+#: field:goeland.thing,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: goeland
+#: field:goeland.arbre,write_date:0
+#: field:goeland.thing,write_date:0
+msgid "Last Updated on"
+msgstr "Date de dernière modification"
+
+#. module: goeland
+#: view:goeland.thing:goeland.course_form_view
+#: view:goeland.thing:goeland.thing_search_view
+#: view:goeland.thing:goeland.thing_tree_view
+#: field:goeland.thing,name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: goeland
+#: field:goeland.arbre,protection:0
+msgid "Protection"
+msgstr "Protection"
+
+#. module: goeland
+#: field:goeland.arbre,envracinaire:0
+msgid "Root environment"
+msgstr "Environement racinaire"
+
+#. module: goeland
+#: field:goeland.arbre,anneeplantation:0
+msgid "Seeding year"
+msgstr "Année de plantation"
+
+#. module: goeland
+#: field:goeland.arbre,espece:0
+msgid "Species"
+msgstr "Espèce"
+
+#. module: goeland
+#: field:goeland.arbre,datereleve:0
+msgid "Statement date"
+msgstr "Date de levé"
+
+#. module: goeland
+#: field:goeland.arbre,chkrevsurface:0
+msgid "Status of coating surface"
+msgstr "Etat du revêtement de surface"
+
+#. module: goeland
+#: field:goeland.arbre,chkentourage:0
+msgid "Status of entourage"
+msgstr "Etat de l'entourage"
+
+#. module: goeland
+#: field:goeland.arbre,chkprotection:0
+msgid "Status of protection"
+msgstr "Etat de la protection"
+
+#. module: goeland
+#: field:goeland.arbre,chkenvracinaire:0
+msgid "Status of root environment"
+msgstr "Etat de l'environement racinaire"
+
+#. module: goeland
+#: field:goeland.arbre,chksubstrat:0
+msgid "Status of substratum"
+msgstr "Etat du substrat"
+
+#. module: goeland
+#: field:goeland.arbre,substrat:0
+msgid "Substratum"
+msgstr "Substrat"
+
+#. module: goeland
+#: selection:goeland.arbre,validation:0
+msgid "Supprimé"
+msgstr "Supprimé"
+
+#. module: goeland
+#: view:goeland.thing:goeland.course_form_view
+#: view:goeland.thing:goeland.thing_tree_view
+#: model:ir.actions.act_window,name:goeland.thing_list_action
+#: model:ir.ui.menu,name:goeland.thing_menu
+msgid "Things"
+msgstr "Objets"
+
+#. module: goeland
+#: field:goeland.arbre,tobecontrolled:0
+msgid "To be controlled"
+msgstr "Contrôlé?"
+
+#. module: goeland
+#: field:goeland.arbre,tobechecked:0
+msgid "ToBeChecked"
+msgstr "A contrôler"
+
+#. module: goeland
+#: model:ir.actions.act_window,name:goeland.arbre_list_action
+#: model:ir.ui.menu,name:goeland.arbres_menu
+msgid "Trees"
+msgstr "Arbres"
+
+#. module: goeland
+#: field:goeland.arbre,validation:0
+msgid "Validation"
+msgstr "Validation"
+
+#. module: goeland
+#: selection:goeland.arbre,tobechecked:0
+msgid "car inexistant"
+msgstr "car inexistant"
+
+#. module: goeland
+#: selection:goeland.arbre,tobechecked:0
+msgid "non"
+msgstr "non"
+
+#. module: goeland
+#: selection:goeland.arbre,tobechecked:0
+msgid "pour des raisons sanitaires"
+msgstr "pour des raisons sanitaires"
+
+#. module: goeland
+#: selection:goeland.arbre,tobechecked:0
+msgid "pour repositionnement"
+msgstr "pour repositionnement"
+

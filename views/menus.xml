@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+  <menuitem id="main_goeland_menu" name="Goeland"/>
+  <menuitem id="thing_menu" name="Things"
+    parent="main_goeland_menu"/>
+</data>
+</openerp>
