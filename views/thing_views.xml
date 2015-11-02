@@ -14,7 +14,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="course_form_view">
+        <record model="ir.ui.view" id="thing_form_view">
             <field name="name">thing.form</field>
             <field name="model">goeland.thing</field>
             <field name="arch" type="xml">

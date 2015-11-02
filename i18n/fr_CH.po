@@ -6,14 +6,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-30 14:37+0000\n"
-"PO-Revision-Date: 2015-10-30 14:37+0000\n"
+"POT-Creation-Date: 2015-11-02 10:28+0000\n"
+"PO-Revision-Date: 2015-11-02 10:28+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: goeland
+#: model:ir.actions.act_window,help:goeland.arbre_genre_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first genus</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier genre</p>\n"
+"            "
 
 #. module: goeland
 #: model:ir.actions.act_window,help:goeland.thing_list_action
@@ -40,9 +47,15 @@ msgid "A repositionner"
 msgstr "A repositionner"
 
 #. module: goeland
+#: view:goeland.arbre_genre:goeland.arbre_genre_search_view
+msgid "Actif"
+msgstr "Actif"
+
+#. module: goeland
+#: view:goeland.arbre:goeland.thing_tree_view
+#: view:goeland.arbre_genre:goeland.arbre_genre_form_view
 #: view:goeland.thing:goeland.course_form_view
 #: view:goeland.thing:goeland.thing_search_view
-#: view:goeland.thing:goeland.thing_tree_view
 #: field:goeland.thing,isactive:0
 msgid "Active"
 msgstr "Actif"
@@ -104,12 +117,14 @@ msgstr "Remarque sur le substart"
 
 #. module: goeland
 #: field:goeland.arbre,create_uid:0
+#: field:goeland.arbre_genre,create_uid:0
 #: field:goeland.thing,create_uid:0
 msgid "Created by"
 msgstr "Créé par"
 
 #. module: goeland
 #: field:goeland.arbre,create_date:0
+#: field:goeland.arbre_genre,create_date:0
 #: field:goeland.thing,create_date:0
 msgid "Created on"
 msgstr "Date de création"
@@ -125,9 +140,9 @@ msgid "Cultivar"
 msgstr "Cultivar"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.thing_tree_view
 #: view:goeland.thing:goeland.course_form_view
 #: view:goeland.thing:goeland.thing_search_view
-#: view:goeland.thing:goeland.thing_tree_view
 #: field:goeland.thing,description:0
 msgid "Description"
 msgstr "Description"
@@ -158,7 +173,14 @@ msgid "Existant"
 msgstr "Existant"
 
 #. module: goeland
-#: field:goeland.arbre,genre:0
+#: view:goeland.arbre:goeland.thing_tree_view
+#: field:goeland.arbre,genre_id:0
+#: view:goeland.arbre_genre:goeland.arbre_genre_form_view
+#: view:goeland.arbre_genre:goeland.arbre_genre_search_view
+#: view:goeland.arbre_genre:goeland.arbre_genre_view
+#: field:goeland.arbre_genre,genre:0
+#: model:ir.actions.act_window,name:goeland.arbre_genre_list_action
+#: model:ir.ui.menu,name:goeland.arbres_genre_menu
 msgid "Genus"
 msgstr "Genre"
 
@@ -189,6 +211,7 @@ msgstr "Hauteur"
 
 #. module: goeland
 #: field:goeland.arbre,id:0
+#: field:goeland.arbre_genre,id:0
 #: field:goeland.thing,id:0
 msgid "ID"
 msgstr "ID"
@@ -197,6 +220,11 @@ msgstr "ID"
 #: field:goeland.thing,dateinactivation:0
 msgid "Inctivation date"
 msgstr "Date d'inactivation"
+
+#. module: goeland
+#: field:goeland.arbre_genre,isactive:0
+msgid "Is active"
+msgstr "Actif"
 
 #. module: goeland
 #: field:goeland.arbre,isincada:0
@@ -210,20 +238,22 @@ msgstr "A un historique?"
 
 #. module: goeland
 #: field:goeland.arbre,write_uid:0
+#: field:goeland.arbre_genre,write_uid:0
 #: field:goeland.thing,write_uid:0
 msgid "Last Updated by"
 msgstr "Dernière modification par"
 
 #. module: goeland
 #: field:goeland.arbre,write_date:0
+#: field:goeland.arbre_genre,write_date:0
 #: field:goeland.thing,write_date:0
 msgid "Last Updated on"
 msgstr "Date de dernière modification"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.thing_tree_view
 #: view:goeland.thing:goeland.course_form_view
 #: view:goeland.thing:goeland.thing_search_view
-#: view:goeland.thing:goeland.thing_tree_view
 #: field:goeland.thing,name:0
 msgid "Name"
 msgstr "Nom"
@@ -242,6 +272,12 @@ msgstr "Environement racinaire"
 #: field:goeland.arbre,anneeplantation:0
 msgid "Seeding year"
 msgstr "Année de plantation"
+
+#. module: goeland
+#: view:goeland.arbre_genre:goeland.arbre_genre_form_view
+#: field:goeland.arbre_genre,sortorder:0
+msgid "Sort order"
+msgstr "Ordre de tri"
 
 #. module: goeland
 #: field:goeland.arbre,espece:0
@@ -289,8 +325,8 @@ msgid "Supprimé"
 msgstr "Supprimé"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.thing_tree_view
 #: view:goeland.thing:goeland.course_form_view
-#: view:goeland.thing:goeland.thing_tree_view
 #: model:ir.actions.act_window,name:goeland.thing_list_action
 #: model:ir.ui.menu,name:goeland.thing_menu
 msgid "Things"

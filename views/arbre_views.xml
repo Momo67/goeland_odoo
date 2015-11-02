@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <!--
         <record model="ir.ui.view" id="thing_search_view">
-            <field name="name">thing.search</field>
-            <field name="model">goeland.thing</field>
+            <field name="name">arbre.search</field>
+            <field name="model">goeland.arbre</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name" string="Nom"/>
@@ -15,6 +14,7 @@
             </field>
         </record>
 
+        <!--
         <record model="ir.ui.view" id="course_form_view">
             <field name="name">thing.form</field>
             <field name="model">goeland.thing</field>
@@ -47,14 +47,15 @@
         </record>
         -->
 
-        <record model="ir.ui.view" id="thing_tree_view">
-            <field name="name">thing.tree</field>
+        <record model="ir.ui.view" id="arbre_tree_view">
+            <field name="name">arbre.tree</field>
             <field name="model">goeland.arbre</field>
             <field name="arch" type="xml">
                 <tree string="Things">
                     <field name="name" string="Name"/>
                     <field name="description" string="Description"/>
                     <field name="isactive" string="Active"/>
+                    <field name="genre_id" string="Genus"/>
                 </tree>
             </field>
         </record>

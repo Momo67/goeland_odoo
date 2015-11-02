@@ -6,12 +6,19 @@ class Arbre(models.Model):
     _name = 'goeland.arbre'
     # _inherits = {'goeland.thing': 'idthing'}
 
-    idthing = fields.Many2one(comodel_name='goeland.thing', required=True, ondelete='cascade', string='Base object', delegate=True)
+    idthing = fields.Many2one(comodel_name='goeland.thing',
+                              required=True,
+                              ondelete='cascade',
+                              string='Base object',
+                              delegate=True)
     # thing_ids = fields.One2many(comodel_name='goeland.thing', inverse_name='id', required=True, ondelete='cascade')
     validation = fields.Selection([('existant', 'Existant'),('supprime', 'Supprimé'),('reposition', 'A repositionner'),
                                    ('replant', 'A replanter'),('waitcare', 'En attente de soin'),('waitfelling', 'En attente d''abattage'),
                                    ('wait replacement', 'En attente de remplacement')], string='Validation', required=True)
-    genre = fields.Selection([('', '')], string='Genus')
+    genre_id = fields.Many2one(comodel_name='goeland.arbre_genre',
+                               ondelete='set null',
+                               string='Genus',
+                               index=True)
     espece = fields.Selection([('', '')], string='Species')
     cultivar = fields.Selection([('', '')], string='Cultivar')
     circonference = fields.Float(string='Circonference', help='Circumference in meters')
@@ -42,13 +49,13 @@ class Arbre(models.Model):
     tobechecked = fields.Selection([('sanitaire', 'pour des raisons sanitaires'),('inexistant', 'car inexistant'),
                                     ('repos', 'pour repositionnement'),('non', 'non')], string='ToBeChecked')
 
-    @api.onchange('validation')
-    def _verify_validation(self):
-        if self.validation != 'existant':
-            return {
-                'warning': {
-                    'title': "Wrong value for validation",
-                    'message': "Change validation value for object with parent %s" % self.idthing.mafonctiondebase()
-                },
-            }
+    # @api.onchange('validation')
+    # def _verify_validation(self):
+    #     if self.validation != 'existant':
+    #         return {
+    #             'warning': {
+    #                 'title': "Wrong value for validation",
+    #                 'message': "Change validation value for object with parent %s" % self.idthing.mafonctiondebase()
+    #             },
+    #         }
 

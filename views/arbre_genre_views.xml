@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="arbre_genre_search_view">
+            <field name="name">arbre_genre.search</field>
+            <field name="model">goeland.arbre_genre</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Genus"/>
+                    <filter name="isactive_filter" string="Actif"
+                            domain="[('isactive', '=', 'True')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="arbre_genre_form_view">
+            <field name="name">arbre_genre.form</field>
+            <field name="model">goeland.arbre_genre</field>
+            <field name="arch" type="xml">
+                <form string="Genus">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Genus"/>
+                            <field name="sortorder" string="Sort order"/>
+                            <field name="isactive" string="Active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="arbre_genre_view">
+            <field name="name">arbre_genre.tree</field>
+            <field name="model">goeland.arbre_genre</field>
+            <field name="arch" type="xml">
+                <tree string="Genus">
+                    <field name="name" string="Genus"/>
+                    <!--
+                    <field name="sortorder" string="Sort order"/>
+                    <field name="isactive" string="Active"/>
+                    -->
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="arbre_genre_list_action">
+            <field name="name">Genus</field>
+            <field name="res_model">goeland.arbre_genre</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_my_genus': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first genus</p>
+            </field>
+        </record>
+
+        <menuitem id="arbres_genre_menu" name="Genus" parent="arbres_menu"
+                  action="arbre_genre_list_action"/>
+    </data>
+</openerp>

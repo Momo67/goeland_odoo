@@ -20,7 +20,8 @@ Goeland module for managing things like\n
  'depends': ['base'],
  'data': ['views/menus.xml',
           'views/thing_views.xml',
-          'views/arbre_views.xml'
+          'views/arbre_views.xml',
+          'views/arbre_genre_views.xml'
           ],
  'images': [],
  'demo': [],
