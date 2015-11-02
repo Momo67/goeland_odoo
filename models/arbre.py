@@ -19,8 +19,14 @@ class Arbre(models.Model):
                                ondelete='set null',
                                string='Genus',
                                index=True)
-    espece = fields.Selection([('', '')], string='Species')
-    cultivar = fields.Selection([('', '')], string='Cultivar')
+    espece_id = fields.Many2one(comodel_name='goeland.arbre_espece',
+                               ondelete='set null',
+                               string='Specie',
+                               index=True)
+    cultivar_id = fields.Many2one(comodel_name='goeland.arbre_cultivar',
+                               ondelete='set null',
+                               string='Cultivar',
+                               index=True)
     circonference = fields.Float(string='Circonference', help='Circumference in meters')
     diametrecouronne = fields.Selection([('', '')], string='Crown diameter')
     hauteur = fields.Selection([('', '')], string='Height')
@@ -47,7 +53,10 @@ class Arbre(models.Model):
     isincada = fields.Boolean(string='Is in cadastre')
     tobecontrolled = fields.Boolean(string='To be controlled')
     tobechecked = fields.Selection([('sanitaire', 'pour des raisons sanitaires'),('inexistant', 'car inexistant'),
-                                    ('repos', 'pour repositionnement'),('non', 'non')], string='ToBeChecked')
+                                    ('repos', 'pour repositionnement'),('non', 'non')], string='Tobechecked')
+
+    secteur = fields.Many2one(comodel_name='goeland.spadom_secteur', string='SPADOM sector')
+    emplacement = fields.Many2one(comodel_name='goeland.spadom_emplacement', string='SPADOM location')
 
     # @api.onchange('validation')
     # def _verify_validation(self):

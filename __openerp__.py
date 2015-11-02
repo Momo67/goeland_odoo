@@ -21,7 +21,9 @@ Goeland module for managing things like\n
  'data': ['views/menus.xml',
           'views/thing_views.xml',
           'views/arbre_views.xml',
-          'views/arbre_genre_views.xml'
+          'views/arbre_genre_views.xml',
+          'views/arbre_espece_views.xml',
+          'views/arbre_cultivar_views.xml'
           ],
  'images': [],
  'demo': [],
