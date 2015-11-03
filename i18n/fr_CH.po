@@ -6,14 +6,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 15:08+0000\n"
-"PO-Revision-Date: 2015-11-02 15:08+0000\n"
+"POT-Creation-Date: 2015-11-03 09:24+0000\n"
+"PO-Revision-Date: 2015-11-03 09:24+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: goeland
+#: model:ir.actions.act_window,help:goeland.spadom_emplacement_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first SPADOM location</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier emplacement SPADOM</p>\n"
+"            "
+
+#. module: goeland
+#: model:ir.actions.act_window,help:goeland.spadom_secteur_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first SPADOM sector</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier secteur SPADOM</p>\n"
+"            "
 
 #. module: goeland
 #: model:ir.actions.act_window,help:goeland.arbre_cultivar_list_action
@@ -73,6 +87,12 @@ msgstr "Actif"
 #: view:goeland.arbre_cultivar:goeland.arbre_cultivar_form_view
 #: view:goeland.arbre_espece:goeland.arbre_espece_form_view
 #: view:goeland.arbre_genre:goeland.arbre_genre_form_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_form_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_search_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_tree_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_form_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_search_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_tree_view
 #: view:goeland.thing:goeland.thing_form_view
 #: view:goeland.thing:goeland.thing_tree_view
 #: field:goeland.thing,isactive:0
@@ -105,6 +125,16 @@ msgstr "Circonference"
 #: help:goeland.arbre,circonference:0
 msgid "Circumference in meters"
 msgstr "Circonférence en mètres"
+
+#. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Circumference of the trunk"
+msgstr "Circonférence du tronc"
+
+#. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Classification"
+msgstr "Classification"
 
 #. module: goeland
 #: field:goeland.arbre,revsurface:0
@@ -159,11 +189,13 @@ msgid "Created on"
 msgstr "Date de création"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,diametrecouronne:0
 msgid "Crown diameter"
 msgstr "Diamètre de la couronne"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,cultivar_id:0
 #: view:goeland.arbre_cultivar:goeland.arbre_cultivar_form_view
 #: view:goeland.arbre_cultivar:goeland.arbre_cultivar_search_view
@@ -177,6 +209,12 @@ msgstr "Cultivar"
 #. module: goeland
 #: view:goeland.arbre:goeland.arbre_tree_view
 #: view:goeland.arbre:goeland.thing_search_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_form_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_search_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_tree_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_form_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_search_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_tree_view
 #: view:goeland.thing:goeland.thing_form_view
 #: view:goeland.thing:goeland.thing_tree_view
 #: field:goeland.thing,description:0
@@ -204,12 +242,17 @@ msgid "Entourage"
 msgstr "Entourage"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Environment"
+msgstr "Environnement"
+
+#. module: goeland
 #: selection:goeland.arbre,validation:0
 msgid "Existant"
 msgstr "Existant"
 
 #. module: goeland
-#: view:goeland.arbre:goeland.arbre_tree_view
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,genre_id:0
 #: view:goeland.arbre_genre:goeland.arbre_genre_form_view
 #: view:goeland.arbre_genre:goeland.arbre_genre_search_view
@@ -226,21 +269,30 @@ msgid "Goeland"
 msgstr "Goéland"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Health status"
+msgstr "Etat sanitaire"
+
+#. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,etatsanitairecouronne:0
 msgid "Health status of crown"
 msgstr "Etat sanitaire de la couronne"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,etatsanitairepied:0
 msgid "Health status of foot"
 msgstr "Etat sanitaire du pied"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,etatsanitairetronc:0
 msgid "Health status of trunk"
 msgstr "Etat sanitaire du tronc"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,hauteur:0
 msgid "Height"
 msgstr "Hauteur"
@@ -269,6 +321,7 @@ msgid "Is active"
 msgstr "Actif"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,isincada:0
 msgid "Is in cadastre"
 msgstr "Cadastré"
@@ -301,7 +354,18 @@ msgid "Last Updated on"
 msgstr "Date de dernière modification"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: goeland
 #: view:goeland.arbre:goeland.arbre_tree_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_form_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_search_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_tree_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_form_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_search_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_tree_view
 #: view:goeland.thing:goeland.thing_form_view
 #: view:goeland.thing:goeland.thing_tree_view
 #: field:goeland.thing,name:0
@@ -314,6 +378,11 @@ msgid "Nom"
 msgstr "Nom"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Page contenant l'environnement de l'arbre"
+msgstr "Page contenant l'environnement de l'arbre"
+
+#. module: goeland
 #: field:goeland.arbre,protection:0
 msgid "Protection"
 msgstr "Protection"
@@ -324,14 +393,39 @@ msgid "Root environment"
 msgstr "Environement racinaire"
 
 #. module: goeland
+#: model:ir.ui.menu,name:goeland.spadom_secteurs_menu
+msgid "SPADOM Sectors"
+msgstr "Secteurs SPADOM"
+
+#. module: goeland
 #: field:goeland.arbre,emplacement:0
 msgid "SPADOM location"
 msgstr "Emplacement SPADOM"
 
 #. module: goeland
+#: model:ir.ui.menu,name:goeland.spadom_emplacements_menu
+msgid "SPADOM locations"
+msgstr "Emplacements SPADOM"
+
+#. module: goeland
 #: field:goeland.arbre,secteur:0
 msgid "SPADOM sector"
 msgstr "Secteur SPADOM"
+
+#. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Sector"
+msgstr "Secteur"
+
+#. module: goeland
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_form_view
+#: view:goeland.spadom_emplacement:goeland.spadom_emplacement_tree_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_form_view
+#: view:goeland.spadom_secteur:goeland.spadom_secteur_tree_view
+#: model:ir.actions.act_window,name:goeland.spadom_emplacement_list_action
+#: model:ir.actions.act_window,name:goeland.spadom_secteur_list_action
+msgid "Sectors"
+msgstr "Secteurs"
 
 #. module: goeland
 #: field:goeland.arbre,anneeplantation:0
@@ -349,6 +443,7 @@ msgid "Sort order"
 msgstr "Ordre de tri"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,espece_id:0
 #: view:goeland.arbre_espece:goeland.arbre_espece_form_view
 #: view:goeland.arbre_espece:goeland.arbre_espece_search_view
@@ -360,6 +455,7 @@ msgid "Specie"
 msgstr "Espèce"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,datereleve:0
 msgid "Statement date"
 msgstr "Date de levé"
@@ -414,9 +510,14 @@ msgid "Things"
 msgstr "Objets"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "To be checked"
+msgstr "A contrôler"
+
+#. module: goeland
 #: field:goeland.arbre,tobecontrolled:0
 msgid "To be controlled"
-msgstr "Contrôlé?"
+msgstr "Contrôlé"
 
 #. module: goeland
 #: field:goeland.arbre,tobechecked:0
@@ -424,12 +525,14 @@ msgid "Tobechecked"
 msgstr "A contrôler"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: model:ir.actions.act_window,name:goeland.arbre_list_action
 #: model:ir.ui.menu,name:goeland.arbres_menu
 msgid "Trees"
 msgstr "Arbres"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,validation:0
 msgid "Validation"
 msgstr "Validation"

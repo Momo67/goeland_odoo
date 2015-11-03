@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="spadom_secteur_search_view">
+            <field name="name">spadom_secteur.search</field>
+            <field name="model">goeland.spadom_secteur</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Name"/>
+                    <field name="description" string="Description"/>
+                    <filter name="isactive_filter" string="Active"
+                            domain="[('isactive', '=', 'True')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="spadom_secteur_form_view">
+            <field name="name">spadom_secteur.form</field>
+            <field name="model">goeland.spadom_secteur</field>
+            <field name="arch" type="xml">
+                <form string="Sectors">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Name"/>
+                            <field name="description" string="Description"/>
+                            <field name="isactive" string="Active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="spadom_secteur_tree_view">
+            <field name="name">spadom_secteur.tree</field>
+            <field name="model">goeland.spadom_secteur</field>
+            <field name="arch" type="xml">
+                <tree string="Sectors">
+                    <field name="name" string="Name"/>
+                    <field name="description" string="Description"/>
+                    <field name="isactive" string="Active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="spadom_secteur_list_action">
+            <field name="name">Sectors</field>
+            <field name="res_model">goeland.spadom_secteur</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_my_spadom_secteurs': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first SPADOM sector</p>
+            </field>
+        </record>
+
+        <menuitem id="spadom_secteurs_menu" name="SPADOM Sectors" parent="things_menu"
+                  action="spadom_secteur_list_action"/>
+    </data>
+</openerp>

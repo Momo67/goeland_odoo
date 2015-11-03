@@ -7,7 +7,7 @@ class Thing(models.Model):
 
     name = fields.Char(string='Name', required=True)
     isactive = fields.Boolean(string='Active')
-    description = fields.Char(string='Description', required=True)
+    description = fields.Char(string='Description')
     dateinactivation = fields.Datetime(string='Inctivation date')
     dateconstruction = fields.Datetime(string='Building date')
     ishavingstory = fields.Boolean(string='Ishavingstory')

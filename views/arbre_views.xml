@@ -14,38 +14,61 @@
             </field>
         </record>
 
-        <!--
-        <record model="ir.ui.view" id="course_form_view">
-            <field name="name">thing.form</field>
-            <field name="model">goeland.thing</field>
+        <record model="ir.ui.view" id="arbre_form_view">
+            <field name="name">arbre.form</field>
+            <field name="model">goeland.arbre</field>
             <field name="arch" type="xml">
-                <form string="Things">
+                <form string="Trees">
                     <sheet>
-                        <group col="3">
-                            <div>
-                                <h3>Name</h3>
-                                <field name="name"/>
-                            </div>
-                            <div>
-                                <h3>Description</h3>
-                                <field name="description"/>
-                            </div>
-                            <div>
-                                <h3>Active</h3>
-                                <field name="isactive"/>
-                            </div>
-
-                        </group>
                         <group>
-                            <field name="name" string="Nom"/>
-                            <field name="description" string="Description"/>
-                            <field name="isactive" string="Actif"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                        <notebook>
+                            <!--
+                            <page string="Description" name="descr">
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                            </page>
+                            -->
+                            <page string="Location" name="location">
+                                <group>
+                                    <field name="datereleve" string="Statement date"/>
+                                    <field name="validation" string="Validation"/>
+                                    <field name="isincada" string="Is in cadastre"/>
+                                    <field name="secteur" string="Sector"/>
+                                    <field name="emplacement" string="Location"/>
+                                </group>
+                            </page>
+                            <page string="Classification" name="classification">
+                                <group>
+                                    <field name="genre_id" string="Genus"/>
+                                    <field name="espece_id" string="Specie"/>
+                                    <field name="cultivar_id" string="Cultivar"/>
+                                    <field name="circonference" string="Circumference of the trunk" />
+                                    <field name="hauteur" string="Height"/>
+                                    <field name="diametrecouronne" string="Crown diameter"/>
+                                </group>
+                            </page>
+                            <page string="Environment" name="environment">
+                                <p>Page contenant l'environnement de l'arbre</p>
+                            </page>
+                            <page string="Health status" name="healthstatus">
+                                <group>
+                                    <field name="etatsanitairepied" string="Health status of foot"/>
+                                    <field name="etatsanitairetronc" string="Health status of trunk"/>
+                                    <field name="etatsanitairecouronne" string="Health status of crown"/>
+                                </group>
+                            </page>
+                        </notebook>
+                        <group>
+                            <field name="tobechecked" string="To be checked"/>
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
-        -->
 
         <record model="ir.ui.view" id="arbre_tree_view">
             <field name="name">arbre.tree</field>
@@ -55,7 +78,6 @@
                     <field name="name" string="Name"/>
                     <field name="description" string="Description"/>
                     <field name="isactive" string="Active"/>
-                    <field name="genre_id" string="Genus"/>
                 </tree>
             </field>
         </record>

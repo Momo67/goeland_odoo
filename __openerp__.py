@@ -23,7 +23,9 @@ Goeland module for managing things like\n
           'views/arbre_views.xml',
           'views/arbre_genre_views.xml',
           'views/arbre_espece_views.xml',
-          'views/arbre_cultivar_views.xml'
+          'views/arbre_cultivar_views.xml',
+          'views/spadom_secteur_views.xml',
+          'views/spadom_emplacement_views.xml',
           ],
  'images': [],
  'demo': [],
