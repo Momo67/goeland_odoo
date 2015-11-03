@@ -23,15 +23,9 @@
                         <group>
                             <field name="name"/>
                             <field name="description"/>
+                            <field name="tobechecked" string="To be checked"/>
                         </group>
                         <notebook>
-                            <!--
-                            <page string="Description" name="descr">
-                                <group>
-                                    <field name="description"/>
-                                </group>
-                            </page>
-                            -->
                             <page string="Location" name="location">
                                 <group>
                                     <field name="datereleve" string="Statement date"/>
@@ -52,7 +46,28 @@
                                 </group>
                             </page>
                             <page string="Environment" name="environment">
-                                <p>Page contenant l'environnement de l'arbre</p>
+                                <group>
+                                    <tree string="Root environment">
+                                        <group>
+                                            <field name="envracinaire" string="Root environment"/>
+                                            <field name="chkenvracinaire"/>
+                                            <field name="envracinairerem"/>
+                                        </group>
+                                    </tree>
+                                    <tree string="Substrat">
+                                        <group>
+                                            <field name="substrat" string="Substrat"/>
+                                            <field name="chksubstrat" string=""/>
+                                            <field name="substratrem" string=""/>
+                                        </group>
+                                    </tree>
+                                    <tree string="Entourage">
+                                        <label for="entourage" string="Entourage"/>
+                                        <field name="entourage" placeholder="Entourage"/>
+                                        <field name="chkentourage" placeholder="Entourage status"/>
+                                        <field name="entouragerem" placeholder="Remark on entourage"/>
+                                    </tree>
+                                </group>
                             </page>
                             <page string="Health status" name="healthstatus">
                                 <group>
@@ -62,9 +77,6 @@
                                 </group>
                             </page>
                         </notebook>
-                        <group>
-                            <field name="tobechecked" string="To be checked"/>
-                        </group>
                     </sheet>
                 </form>
             </field>
