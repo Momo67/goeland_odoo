@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="name" string="Genus"/>
-                    <filter name="isactive_filter" string="Actif"
+                    <filter name="isactive_filter" string="Active"
                             domain="[('isactive', '=', 'True')]"/>
                 </search>
             </field>

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-03 09:24+0000\n"
-"PO-Revision-Date: 2015-11-03 09:24+0000\n"
+"POT-Creation-Date: 2015-11-03 16:31+0000\n"
+"PO-Revision-Date: 2015-11-03 16:31+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,10 +37,24 @@ msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier cultivar</p>\n"
 "            "
 
 #. module: goeland
+#: model:ir.actions.act_window,help:goeland.liste_ordree_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first element</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier élément</p>\n"
+"            "
+
+#. module: goeland
 #: model:ir.actions.act_window,help:goeland.arbre_genre_list_action
 msgid "<p class=\"oe_view_nocontent_create\">Create the first genus</p>\n"
 "            "
 msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier genre</p>\n"
+"            "
+
+#. module: goeland
+#: model:ir.actions.act_window,help:goeland.arbre_envracinaire_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first root environment element</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Créer le premier élément d'environnement racinaire</p>\n"
 "            "
 
 #. module: goeland
@@ -75,18 +89,17 @@ msgid "A repositionner"
 msgstr "A repositionner"
 
 #. module: goeland
-#: view:goeland.arbre:goeland.thing_search_view
-#: view:goeland.arbre_cultivar:goeland.arbre_cultivar_search_view
-#: view:goeland.arbre_espece:goeland.arbre_espece_search_view
-#: view:goeland.arbre_genre:goeland.arbre_genre_search_view
-msgid "Actif"
-msgstr "Actif"
-
-#. module: goeland
 #: view:goeland.arbre:goeland.arbre_tree_view
+#: view:goeland.arbre:goeland.thing_search_view
 #: view:goeland.arbre_cultivar:goeland.arbre_cultivar_form_view
+#: view:goeland.arbre_cultivar:goeland.arbre_cultivar_search_view
 #: view:goeland.arbre_espece:goeland.arbre_espece_form_view
+#: view:goeland.arbre_espece:goeland.arbre_espece_search_view
 #: view:goeland.arbre_genre:goeland.arbre_genre_form_view
+#: view:goeland.arbre_genre:goeland.arbre_genre_search_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_form_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_search_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_view
 #: view:goeland.spadom_emplacement:goeland.spadom_emplacement_form_view
 #: view:goeland.spadom_emplacement:goeland.spadom_emplacement_search_view
 #: view:goeland.spadom_emplacement:goeland.spadom_emplacement_tree_view
@@ -137,7 +150,9 @@ msgid "Classification"
 msgstr "Classification"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,revsurface:0
+#: field:goeland.arbre_revsurface,name:0
 msgid "Coating surface"
 msgstr "Revêtement de surface"
 
@@ -169,8 +184,14 @@ msgstr "Remarque sur le substart"
 #. module: goeland
 #: field:goeland.arbre,create_uid:0
 #: field:goeland.arbre_cultivar,create_uid:0
+#: field:goeland.arbre_entourage,create_uid:0
+#: field:goeland.arbre_envracinaire,create_uid:0
 #: field:goeland.arbre_espece,create_uid:0
 #: field:goeland.arbre_genre,create_uid:0
+#: field:goeland.arbre_protection,create_uid:0
+#: field:goeland.arbre_revsurface,create_uid:0
+#: field:goeland.arbre_substrat,create_uid:0
+#: field:goeland.liste_ordree,create_uid:0
 #: field:goeland.spadom_emplacement,create_uid:0
 #: field:goeland.spadom_secteur,create_uid:0
 #: field:goeland.thing,create_uid:0
@@ -180,8 +201,14 @@ msgstr "Créé par"
 #. module: goeland
 #: field:goeland.arbre,create_date:0
 #: field:goeland.arbre_cultivar,create_date:0
+#: field:goeland.arbre_entourage,create_date:0
+#: field:goeland.arbre_envracinaire,create_date:0
 #: field:goeland.arbre_espece,create_date:0
 #: field:goeland.arbre_genre,create_date:0
+#: field:goeland.arbre_protection,create_date:0
+#: field:goeland.arbre_revsurface,create_date:0
+#: field:goeland.arbre_substrat,create_date:0
+#: field:goeland.liste_ordree,create_date:0
 #: field:goeland.spadom_emplacement,create_date:0
 #: field:goeland.spadom_secteur,create_date:0
 #: field:goeland.thing,create_date:0
@@ -237,7 +264,9 @@ msgid "En attente de soin"
 msgstr "En attente de soin"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,entourage:0
+#: field:goeland.arbre_entourage,name:0
 msgid "Entourage"
 msgstr "Entourage"
 
@@ -300,13 +329,32 @@ msgstr "Hauteur"
 #. module: goeland
 #: field:goeland.arbre,id:0
 #: field:goeland.arbre_cultivar,id:0
+#: field:goeland.arbre_entourage,id:0
+#: field:goeland.arbre_envracinaire,id:0
 #: field:goeland.arbre_espece,id:0
 #: field:goeland.arbre_genre,id:0
+#: field:goeland.arbre_protection,id:0
+#: field:goeland.arbre_revsurface,id:0
+#: field:goeland.arbre_substrat,id:0
+#: field:goeland.liste_ordree,id:0
 #: field:goeland.spadom_emplacement,id:0
 #: field:goeland.spadom_secteur,id:0
 #: field:goeland.thing,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: goeland
+#: field:goeland.arbre_cultivar,idgoeland:0
+#: field:goeland.arbre_entourage,idgoeland:0
+#: field:goeland.arbre_envracinaire,idgoeland:0
+#: field:goeland.arbre_espece,idgoeland:0
+#: field:goeland.arbre_genre,idgoeland:0
+#: field:goeland.arbre_protection,idgoeland:0
+#: field:goeland.arbre_revsurface,idgoeland:0
+#: field:goeland.arbre_substrat,idgoeland:0
+#: field:goeland.liste_ordree,idgoeland:0
+msgid "Id Goeland"
+msgstr "Id Goeland"
 
 #. module: goeland
 #: field:goeland.thing,dateinactivation:0
@@ -315,8 +363,14 @@ msgstr "Date d'inactivation"
 
 #. module: goeland
 #: field:goeland.arbre_cultivar,isactive:0
+#: field:goeland.arbre_entourage,isactive:0
+#: field:goeland.arbre_envracinaire,isactive:0
 #: field:goeland.arbre_espece,isactive:0
 #: field:goeland.arbre_genre,isactive:0
+#: field:goeland.arbre_protection,isactive:0
+#: field:goeland.arbre_revsurface,isactive:0
+#: field:goeland.arbre_substrat,isactive:0
+#: field:goeland.liste_ordree,isactive:0
 msgid "Is active"
 msgstr "Actif"
 
@@ -334,8 +388,14 @@ msgstr "Ishavingstory"
 #. module: goeland
 #: field:goeland.arbre,write_uid:0
 #: field:goeland.arbre_cultivar,write_uid:0
+#: field:goeland.arbre_entourage,write_uid:0
+#: field:goeland.arbre_envracinaire,write_uid:0
 #: field:goeland.arbre_espece,write_uid:0
 #: field:goeland.arbre_genre,write_uid:0
+#: field:goeland.arbre_protection,write_uid:0
+#: field:goeland.arbre_revsurface,write_uid:0
+#: field:goeland.arbre_substrat,write_uid:0
+#: field:goeland.liste_ordree,write_uid:0
 #: field:goeland.spadom_emplacement,write_uid:0
 #: field:goeland.spadom_secteur,write_uid:0
 #: field:goeland.thing,write_uid:0
@@ -345,13 +405,30 @@ msgstr "Dernière modification par"
 #. module: goeland
 #: field:goeland.arbre,write_date:0
 #: field:goeland.arbre_cultivar,write_date:0
+#: field:goeland.arbre_entourage,write_date:0
+#: field:goeland.arbre_envracinaire,write_date:0
 #: field:goeland.arbre_espece,write_date:0
 #: field:goeland.arbre_genre,write_date:0
+#: field:goeland.arbre_protection,write_date:0
+#: field:goeland.arbre_revsurface,write_date:0
+#: field:goeland.arbre_substrat,write_date:0
+#: field:goeland.liste_ordree,write_date:0
 #: field:goeland.spadom_emplacement,write_date:0
 #: field:goeland.spadom_secteur,write_date:0
 #: field:goeland.thing,write_date:0
 msgid "Last Updated on"
 msgstr "Date de dernière modification"
+
+#. module: goeland
+#: view:goeland.liste_ordree:goeland.liste_ordree_form_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_view
+msgid "List"
+msgstr "List"
+
+#. module: goeland
+#: model:ir.actions.act_window,name:goeland.liste_ordree_list_action
+msgid "Liste"
+msgstr "Liste"
 
 #. module: goeland
 #: view:goeland.arbre:goeland.arbre_form_view
@@ -360,6 +437,10 @@ msgstr "Emplacement"
 
 #. module: goeland
 #: view:goeland.arbre:goeland.arbre_tree_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_form_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_search_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_view
+#: field:goeland.liste_ordree,name:0
 #: view:goeland.spadom_emplacement:goeland.spadom_emplacement_form_view
 #: view:goeland.spadom_emplacement:goeland.spadom_emplacement_search_view
 #: view:goeland.spadom_emplacement:goeland.spadom_emplacement_tree_view
@@ -379,16 +460,17 @@ msgstr "Nom"
 
 #. module: goeland
 #: view:goeland.arbre:goeland.arbre_form_view
-msgid "Page contenant l'environnement de l'arbre"
-msgstr "Page contenant l'environnement de l'arbre"
-
-#. module: goeland
 #: field:goeland.arbre,protection:0
+#: field:goeland.arbre_protection,name:0
 msgid "Protection"
 msgstr "Protection"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,envracinaire:0
+#: field:goeland.arbre_envracinaire,name:0
+#: model:ir.actions.act_window,name:goeland.arbre_envracinaire_list_action
+#: model:ir.ui.menu,name:goeland.arbres_envracinaire_menu
 msgid "Root environment"
 msgstr "Environement racinaire"
 
@@ -428,6 +510,7 @@ msgid "Sectors"
 msgstr "Secteurs"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
 #: field:goeland.arbre,anneeplantation:0
 msgid "Seeding year"
 msgstr "Année de plantation"
@@ -435,10 +518,18 @@ msgstr "Année de plantation"
 #. module: goeland
 #: view:goeland.arbre_cultivar:goeland.arbre_cultivar_form_view
 #: field:goeland.arbre_cultivar,sortorder:0
+#: field:goeland.arbre_entourage,sortorder:0
+#: field:goeland.arbre_envracinaire,sortorder:0
 #: view:goeland.arbre_espece:goeland.arbre_espece_form_view
 #: field:goeland.arbre_espece,sortorder:0
 #: view:goeland.arbre_genre:goeland.arbre_genre_form_view
 #: field:goeland.arbre_genre,sortorder:0
+#: field:goeland.arbre_protection,sortorder:0
+#: field:goeland.arbre_revsurface,sortorder:0
+#: field:goeland.arbre_substrat,sortorder:0
+#: view:goeland.liste_ordree:goeland.liste_ordree_form_view
+#: view:goeland.liste_ordree:goeland.liste_ordree_view
+#: field:goeland.liste_ordree,sortorder:0
 msgid "Sort order"
 msgstr "Ordre de tri"
 
@@ -486,7 +577,13 @@ msgid "Status of substratum"
 msgstr "Etat du substrat"
 
 #. module: goeland
+#: view:goeland.arbre:goeland.arbre_form_view
+msgid "Substrat"
+msgstr "Substrat"
+
+#. module: goeland
 #: field:goeland.arbre,substrat:0
+#: field:goeland.arbre_substrat,name:0
 msgid "Substratum"
 msgstr "Substrat"
 
@@ -517,12 +614,12 @@ msgstr "A contrôler"
 #. module: goeland
 #: field:goeland.arbre,tobecontrolled:0
 msgid "To be controlled"
-msgstr "Contrôlé"
+msgstr "A contrôler"
 
 #. module: goeland
 #: field:goeland.arbre,tobechecked:0
 msgid "Tobechecked"
-msgstr "A contrôler"
+msgstr "Tobechecked"
 
 #. module: goeland
 #: view:goeland.arbre:goeland.arbre_form_view

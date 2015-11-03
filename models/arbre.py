@@ -30,7 +30,7 @@ class Arbre(models.Model):
     circonference = fields.Float(string='Circonference', help='Circumference in meters')
     diametrecouronne = fields.Selection([('', '')], string='Crown diameter')
     hauteur = fields.Selection([('', '')], string='Height')
-    envracinaire = fields.Selection([('', '')], string='Root environment')
+    envracinaire_id = fields.Many2one(comodel_name='goeland.arbre_envracinaire', string='Root environment')
     chkenvracinaire = fields.Selection([('', '')], string='Status of root environment')
     envracinairerem = fields.Char(string='Comment on root environment')
     substrat = fields.Selection([('', '')], string='Substratum')
