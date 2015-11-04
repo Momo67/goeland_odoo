@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="arbre_protection_search_view">
+            <field name="name">arbre_protection.search</field>
+            <field name="model">goeland.arbre_protection</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Protection"/>
+                    <filter name="isactive_filter" string="Active"
+                            domain="[('isactive', '=', 'True')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="arbre_protection_list_action">
+            <field name="name">Protection</field>
+            <field name="res_model">goeland.arbre_protection</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_isactive_filter': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first protection element</p>
+            </field>
+        </record>
+
+        <menuitem id="arbres_protection_menu" name="Protection" parent="arbres_menu"
+                  action="arbre_protection_list_action"/>
+    </data>
+</openerp>

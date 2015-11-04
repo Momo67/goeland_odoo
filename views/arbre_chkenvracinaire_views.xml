@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="arbre_chkenvracinaire_search_view">
+            <field name="name">arbre_chkenvracinaire.search</field>
+            <field name="model">goeland.arbre_chkenvracinaire</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Root environment check"/>
+                    <filter name="isactive_filter" string="Active"
+                            domain="[('isactive', '=', 'True')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="arbre_chkenvracinaire_list_action">
+            <field name="name">Root environment check</field>
+            <field name="res_model">goeland.arbre_chkenvracinaire</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_isactive_filter': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first root environment check element</p>
+            </field>
+        </record>
+
+        <menuitem id="arbres_chkenvracinaire_menu" name="Root environment check" parent="arbres_menu"
+                  action="arbre_chkenvracinaire_list_action"/>
+    </data>
+</openerp>

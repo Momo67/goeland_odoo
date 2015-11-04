@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="arbre_chksubstrat_search_view">
+            <field name="name">arbre_chksubstrat.search</field>
+            <field name="model">goeland.arbre_chksubstrat</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Substratum check"/>
+                    <filter name="isactive_filter" string="Active"
+                            domain="[('isactive', '=', 'True')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="arbre_chksubstrat_list_action">
+            <field name="name">Substratum check</field>
+            <field name="res_model">goeland.arbre_chksubstrat</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_isactive_filter': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first substratum check element</p>
+            </field>
+        </record>
+
+        <menuitem id="arbres_chksubstrat_menu" name="Substratum check" parent="arbres_menu"
+                  action="arbre_chksubstrat_list_action"/>
+    </data>
+</openerp>

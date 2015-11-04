@@ -6,7 +6,7 @@
             <field name="model">goeland.arbre</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="name" string="Nom"/>
+                    <field name="name" string="Name"/>
                     <field name="description" string="Description"/>
                     <filter name="isactive_filter" string="Active"
                             domain="[('isactive', '=', 'True')]"/>
@@ -23,7 +23,7 @@
                         <group>
                             <field name="name"/>
                             <field name="description"/>
-                            <field name="tobechecked" string="To be checked"/>
+                            <field name="tobechecked_id" string="To be checked"/>
                         </group>
                         <notebook>
                             <page string="Location" name="location">
@@ -37,9 +37,9 @@
                             </page>
                             <page string="Classification" name="classification">
                                 <group>
-                                    <field name="genre_id" string="Genus"/>
-                                    <field name="espece_id" string="Specie"/>
-                                    <field name="cultivar_id" string="Cultivar"/>
+                                    <field name="genre_id" domain="[('isactive','!=',False)]" string="Genus"/>
+                                    <field name="espece_id" domain="[('isactive','!=',False)]" string="Specie"/>
+                                    <field name="cultivar_id" domain="[('isactive','!=',False)]" string="Cultivar"/>
                                     <field name="circonference" string="Circumference of the trunk" />
                                     <field name="hauteur" string="Height"/>
                                     <field name="diametrecouronne" string="Crown diameter"/>
@@ -47,33 +47,33 @@
                             </page>
                             <page string="Environment" name="environment">
                                 <group col="2">
-                                    <tree string="Root environment">
+                                    <tree>
                                         <group>
                                             <field name="envracinaire_id" string="Root environment" domain="[('isactive','!=',False)]"/>
-                                            <field name="chkenvracinaire"/>
+                                            <field name="chkenvracinaire_id"/>
                                             <field name="envracinairerem"/>
                                         </group>
                                     </tree>
-                                    <tree string="Substrat">
+                                    <tree>
                                         <group>
-                                            <field name="substrat" string="Substrat"/>
-                                            <field name="chksubstrat"/>
+                                            <field name="substrat_id" string="Substrat" domain="[('isactive','!=',False)]"/>
+                                            <field name="chksubstrat_id"/>
                                             <field name="substratrem"/>
                                         </group>
                                     </tree>
                                 </group>
                                 <group col="2">
-                                    <tree string="Entourage">
+                                    <tree>
                                         <group>
-                                            <field name="entourage" string="Entourage"/>
-                                            <field name="chkentourage"/>
+                                            <field name="entourage_id" string="Entourage" domain="[('isactive','!=',False)]"/>
+                                            <field name="chkentourage_id"/>
                                             <field name="entouragerem"/>
                                         </group>
                                     </tree>
                                     <tree>
                                         <group>
-                                            <field name="revsurface" string="Coating surface"/>
-                                            <field name="chkrevsurface"/>
+                                            <field name="revsurface_id" string="Coating surface" domain="[('isactive','!=',False)]"/>
+                                            <field name="chkrevsurface_id"/>
                                             <field name="revsurfacerem"/>
                                         </group>
                                     </tree>
@@ -81,8 +81,8 @@
                                 <group col="2">
                                     <tree>
                                         <group>
-                                            <field name="protection" string="Protection"/>
-                                            <field name="chkprotection"/>
+                                            <field name="protection_id" string="Protection" domain="[('isactive','!=',False)]"/>
+                                            <field name="chkprotection_id"/>
                                             <field name="protectionrem"/>
                                         </group>
                                     </tree>
@@ -95,9 +95,9 @@
                             </page>
                             <page string="Health status" name="healthstatus">
                                 <group>
-                                    <field name="etatsanitairepied" string="Health status of foot"/>
-                                    <field name="etatsanitairetronc" string="Health status of trunk"/>
-                                    <field name="etatsanitairecouronne" string="Health status of crown"/>
+                                    <field name="etatsanitairepied_id" string="Health status of foot" domain="[('isactive','!=',False)]"/>
+                                    <field name="etatsanitairetronc_id" string="Health status of trunk" domain="[('isactive','!=',False)]"/>
+                                    <field name="etatsanitairecouronne_id" string="Health status of crown" domain="[('isactive','!=',False)]"/>
                                 </group>
                             </page>
                         </notebook>

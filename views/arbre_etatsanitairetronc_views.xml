@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="arbre_etatsanitairetronc_search_view">
+            <field name="name">arbre_etatsanitairetronc.search</field>
+            <field name="model">goeland.arbre_etatsanitairetronc</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Health status of trunk"/>
+                    <filter name="isactive_filter" string="Active"
+                            domain="[('isactive', '=', 'True')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="arbre_etatsanitairetronc_list_action">
+            <field name="name">Health status of trunk</field>
+            <field name="res_model">goeland.arbre_etatsanitairetronc</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_isactive_filter': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first root environment element</p>
+            </field>
+        </record>
+
+        <menuitem id="arbres_etatsanitairetronc_menu" name="Health status of trunk" parent="arbres_menu"
+                  action="arbre_etatsanitairetronc_list_action"/>
+    </data>
+</openerp>

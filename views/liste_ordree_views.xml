@@ -42,7 +42,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="liste_ordree_list_action">
-            <field name="name">Liste</field>
+            <field name="name">List</field>
             <field name="res_model">goeland.liste_ordree</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>

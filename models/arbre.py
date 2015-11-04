@@ -30,30 +30,42 @@ class Arbre(models.Model):
     circonference = fields.Float(string='Circonference', help='Circumference in meters')
     diametrecouronne = fields.Selection([('', '')], string='Crown diameter')
     hauteur = fields.Selection([('', '')], string='Height')
-    envracinaire_id = fields.Many2one(comodel_name='goeland.arbre_envracinaire', string='Root environment')
-    chkenvracinaire = fields.Selection([('', '')], string='Status of root environment')
+    envracinaire_id = fields.Many2one(comodel_name='goeland.arbre_envracinaire',
+                                      string='Root environment')
+    chkenvracinaire_id = fields.Many2one(comodel_name='goeland.arbre_chkenvracinaire',
+                                         string='Status of root environment')
     envracinairerem = fields.Char(string='Comment on root environment')
-    substrat = fields.Selection([('', '')], string='Substratum')
-    chksubstrat = fields.Selection([('', '')], string='Status of substratum')
+    substrat_id = fields.Many2one(comodel_name='goeland.arbre_substrat',
+                                  string='Substratum')
+    chksubstrat_id = fields.Many2one(comodel_name='goeland.arbre_chksubstrat',
+                                     string='Status of substratum')
     substratrem = fields.Char(string='Comment on substratum')
-    entourage = fields.Selection([('', '')], string='Entourage')
-    chkentourage = fields.Selection([('', '')], string='Status of entourage')
+    entourage_id = fields.Many2one(comodel_name='goeland.arbre_entourage',
+                                   string='Entourage')
+    chkentourage_id = fields.Many2one(comodel_name='goeland.arbre_chkentourage',
+                                      string='Status of entourage')
     entouragerem = fields.Char(string='Comment on entourage')
-    revsurface = fields.Selection([('', '')], string='Coating surface')
-    chkrevsurface = fields.Selection([('', '')], string='Status of coating surface')
+    revsurface_id = fields.Many2one(comodel_name='goeland.arbre_revsurface',
+                                    string='Coating surface')
+    chkrevsurface_id = fields.Many2one(comodel_name='goeland.arbre_chkrevsurface',
+                                       string='Status of coating surface')
     revsurfacerem = fields.Char(string='Comment on coating surface')
-    protection = fields.Selection([('', '')], string='Protection')
-    chkprotection = fields.Selection([('', '')], string='Status of protection')
+    protection_id = fields.Many2one(comodel_name='goeland.arbre_protection',
+                                    string='Protection')
+    chkprotection_id = fields.Many2one(comodel_name='goeland.arbre_chkprotection',
+                                       string='Status of protection')
     protectionrem = fields.Char(string='Comment on protection')
-    etatsanitairepied = fields.Selection([('', '')], string='Health status of foot')
-    etatsanitairetronc= fields.Selection([('', '')], string='Health status of trunk')
-    etatsanitairecouronne = fields.Selection([('', '')], string='Health status of crown')
+    etatsanitairepied_id = fields.Many2one(comodel_name='goeland.arbre_etatsanitairepied',
+                                           string='Health status of foot')
+    etatsanitairetronc_id = fields.Many2one(comodel_name='goeland.arbre_etatsanitairetronc',
+                                            string='Health status of trunk')
+    etatsanitairecouronne_id = fields.Many2one(comodel_name='goeland.etatsanitairecouronne',
+                                               string='Health status of crown')
     datereleve = fields.Datetime(string='Statement date')
     anneeplantation = fields.Char(size=4, string='Seeding year')
     isincada = fields.Boolean(string='Is in cadastre')
     tobecontrolled = fields.Boolean(string='To be controlled')
-    tobechecked = fields.Selection([('sanitaire', 'pour des raisons sanitaires'),('inexistant', 'car inexistant'),
-                                    ('repos', 'pour repositionnement'),('non', 'non')], string='Tobechecked')
+    tobechecked_id = fields.Many2one(comodel_name='goeland.arbre_tobechecked', string='Tobechecked')
 
     secteur = fields.Many2one(comodel_name='goeland.spadom_secteur', string='SPADOM sector')
     emplacement = fields.Many2one(comodel_name='goeland.spadom_emplacement', string='SPADOM location')
