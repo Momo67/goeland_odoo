@@ -23,23 +23,32 @@
                         <group>
                             <field name="name"/>
                             <field name="description"/>
-                            <field name="tobechecked_id" string="To be checked"/>
+                            <field name="tobechecked_id" widget="selection" string="To be checked"/>
                         </group>
                         <notebook>
                             <page string="Location" name="location">
                                 <group>
                                     <field name="datereleve" string="Statement date"/>
-                                    <field name="validation" string="Validation"/>
+                                    <field name="validation_id" widget="selection" string="Validation"/>
                                     <field name="isincada" string="Is in cadastre"/>
-                                    <field name="secteur" string="Sector"/>
-                                    <field name="emplacement" string="Location"/>
+                                    <field name="secteur" widget="selection" string="Sector"/>
+                                    <field name="emplacement" widget="selection" string="Location"/>
                                 </group>
                             </page>
                             <page string="Classification" name="classification">
                                 <group>
-                                    <field name="genre_id" domain="[('isactive','!=',False)]" string="Genus"/>
-                                    <field name="espece_id" domain="[('isactive','!=',False)]" string="Specie"/>
-                                    <field name="cultivar_id" domain="[('isactive','!=',False)]" string="Cultivar"/>
+                                    <field name="genre_id"
+                                           domain="[('isactive','!=',False)]"
+                                           widget="selection"
+                                           string="Genus"/>
+                                    <field name="espece_id"
+                                           domain="[('isactive','!=',False)]"
+                                           widget="selection"
+                                           string="Specie"/>
+                                    <field name="cultivar_id"
+                                           domain="[('isactive','!=',False)]"
+                                           widget="selection"
+                                           string="Cultivar"/>
                                     <field name="circonference" string="Circumference of the trunk" />
                                     <field name="hauteur" string="Height"/>
                                     <field name="diametrecouronne" string="Crown diameter"/>
@@ -49,15 +58,25 @@
                                 <group col="2">
                                     <tree>
                                         <group>
-                                            <field name="envracinaire_id" string="Root environment" domain="[('isactive','!=',False)]"/>
-                                            <field name="chkenvracinaire_id"/>
+                                            <field name="envracinaire_id"
+                                                   widget="selection"
+                                                   domain="[('isactive','!=',False)]"
+                                                   string="Root environment"/>
+                                            <field name="chkenvracinaire_id"
+                                                   widget="selection"
+                                                   domain="[('isactive','!=',False)]"/>
                                             <field name="envracinairerem"/>
                                         </group>
                                     </tree>
                                     <tree>
                                         <group>
-                                            <field name="substrat_id" string="Substrat" domain="[('isactive','!=',False)]"/>
-                                            <field name="chksubstrat_id"/>
+                                            <field name="substrat_id"
+                                                   string="Substrat"
+                                                   widget="selection"
+                                                   domain="[('isactive','!=',False)]"/>
+                                            <field name="chksubstrat_id"
+                                                    widget="selection"
+                                                    domain="[('isactive','!=',False)]"/>
                                             <field name="substratrem"/>
                                         </group>
                                     </tree>
@@ -65,15 +84,25 @@
                                 <group col="2">
                                     <tree>
                                         <group>
-                                            <field name="entourage_id" string="Entourage" domain="[('isactive','!=',False)]"/>
-                                            <field name="chkentourage_id"/>
+                                            <field name="entourage_id"
+                                                   string="Entourage"
+                                                   widget="selection"
+                                                   domain="[('isactive','!=',False)]"/>
+                                            <field name="chkentourage_id"
+                                                    widget="selection"
+                                                    domain="[('isactive','!=',False)]"/>
                                             <field name="entouragerem"/>
                                         </group>
                                     </tree>
                                     <tree>
                                         <group>
-                                            <field name="revsurface_id" string="Coating surface" domain="[('isactive','!=',False)]"/>
-                                            <field name="chkrevsurface_id"/>
+                                            <field name="revsurface_id"
+                                                   string="Coating surface"
+                                                   widget="selection"
+                                                   domain="[('isactive','!=',False)]"/>
+                                            <field name="chkrevsurface_id"
+                                                    widget="selection"
+                                                    domain="[('isactive','!=',False)]"/>
                                             <field name="revsurfacerem"/>
                                         </group>
                                     </tree>
@@ -81,8 +110,13 @@
                                 <group col="2">
                                     <tree>
                                         <group>
-                                            <field name="protection_id" string="Protection" domain="[('isactive','!=',False)]"/>
-                                            <field name="chkprotection_id"/>
+                                            <field name="protection_id"
+                                                   string="Protection"
+                                                   widget="selection"
+                                                   domain="[('isactive','!=',False)]"/>
+                                            <field name="chkprotection_id"
+                                                   widget="selection"
+                                                   domain="[('isactive','!=',False)]"/>
                                             <field name="protectionrem"/>
                                         </group>
                                     </tree>
@@ -95,9 +129,18 @@
                             </page>
                             <page string="Health status" name="healthstatus">
                                 <group>
-                                    <field name="etatsanitairepied_id" string="Health status of foot" domain="[('isactive','!=',False)]"/>
-                                    <field name="etatsanitairetronc_id" string="Health status of trunk" domain="[('isactive','!=',False)]"/>
-                                    <field name="etatsanitairecouronne_id" string="Health status of crown" domain="[('isactive','!=',False)]"/>
+                                    <field name="etatsanitairepied_id"
+                                           widget="selection"
+                                           domain="[('isactive','!=',False)]"
+                                           string="Health status of foot"/>
+                                    <field name="etatsanitairetronc_id"
+                                           widget="selection"
+                                           domain="[('isactive','!=',False)]"
+                                           string="Health status of trunk"/>
+                                    <field name="etatsanitairecouronne_id"
+                                           widget="selection"
+                                           domain="[('isactive','!=',False)]"
+                                           string="Health status of crown"/>
                                 </group>
                             </page>
                         </notebook>

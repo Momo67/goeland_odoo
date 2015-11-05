@@ -27,6 +27,7 @@ Goeland module for managing things like\n
           'views/spadom_secteur_views.xml',
           'views/spadom_emplacement_views.xml',
           'views/liste_ordree_views.xml',
+          'views/arbre_validation_views.xml',
           'views/arbre_envracinaire_views.xml',
           'views/arbre_substrat_views.xml',
           'views/arbre_entourage_views.xml',

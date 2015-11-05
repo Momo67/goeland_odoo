@@ -12,21 +12,21 @@ class Arbre(models.Model):
                               string='Base object',
                               delegate=True)
     # thing_ids = fields.One2many(comodel_name='goeland.thing', inverse_name='id', required=True, ondelete='cascade')
-    validation = fields.Selection([('existant', 'Existant'),('supprime', 'Supprimé'),('reposition', 'A repositionner'),
-                                   ('replant', 'A replanter'),('waitcare', 'En attente de soin'),('waitfelling', 'En attente d''abattage'),
-                                   ('wait replacement', 'En attente de remplacement')], string='Validation', required=True)
+    validation_id = fields.Many2one(comodel_name='goeland.arbre_validation',
+                                    string='Validation',
+                                    required=True)
     genre_id = fields.Many2one(comodel_name='goeland.arbre_genre',
                                ondelete='set null',
                                string='Genus',
                                index=True)
     espece_id = fields.Many2one(comodel_name='goeland.arbre_espece',
-                               ondelete='set null',
-                               string='Specie',
-                               index=True)
+                                ondelete='set null',
+                                string='Specie',
+                                index=True)
     cultivar_id = fields.Many2one(comodel_name='goeland.arbre_cultivar',
-                               ondelete='set null',
-                               string='Cultivar',
-                               index=True)
+                                  ondelete='set null',
+                                  string='Cultivar',
+                                  index=True)
     circonference = fields.Float(string='Circonference', help='Circumference in meters')
     diametrecouronne = fields.Selection([('', '')], string='Crown diameter')
     hauteur = fields.Selection([('', '')], string='Height')
@@ -59,7 +59,7 @@ class Arbre(models.Model):
                                            string='Health status of foot')
     etatsanitairetronc_id = fields.Many2one(comodel_name='goeland.arbre_etatsanitairetronc',
                                             string='Health status of trunk')
-    etatsanitairecouronne_id = fields.Many2one(comodel_name='goeland.etatsanitairecouronne',
+    etatsanitairecouronne_id = fields.Many2one(comodel_name='goeland.arbre_etatsanitairecouronne',
                                                string='Health status of crown')
     datereleve = fields.Datetime(string='Statement date')
     anneeplantation = fields.Char(size=4, string='Seeding year')
