@@ -1,0 +1,12 @@
+﻿idgoeland;name;sortorder;isactive
+1;Pas défini;0;0
+2;Pleine terre;10;1
+3;En bac;0;0
+4;Terre - pierre;0;0
+5;Terre - gravier;0;0
+6;En fosse;0;0
+7;Berme continue;20;1
+8;Fosse continue;30;1
+9;Fosse;40;1
+10;Bac;50;1
+11;Autre;60;1

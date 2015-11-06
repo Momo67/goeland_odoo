@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="ProductsWidget">
+        <div>
+            <t t-foreach="widget.products" t-as="product">
+                <span class="oe_products_item"
+                      t-attf-style="background-color: {{ widget.color }};">
+                    <t t-esc="product"/>
+                </span>
+                <br/>
+            </t>
+        </div>
+    </t>
+
+    <t t-name="link">
+        <div>manage your template</div>
+    </t>
+
+    <t t-name="SortedList">
+        <div></div>
+    </t>
+
+    <t t-name="List">
+        <div class="oe_goeland_list">
+            <!--
+            <t t-if="! widget.get('effective_readonly')">
+                <input type="text"></input>
+            </t>
+            <t t-if="widget.get('effective_readonly')">
+                <p><t t-esc="item.name"/></p>
+            </t>
+            -->
+            <t t-foreach="items" t-as="item">
+                <p><t t-esc="item.name"/></p>
+            </t>
+            <!--
+            <p><t t-esc="item.name"/></p>
+            -->
+        </div>
+    </t>
+</templates>

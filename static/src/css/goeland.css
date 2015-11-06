@@ -1,0 +1,14 @@
+.oe_products_item {
+    display: inline-block;
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.oe_goeland_list {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #F0EEEE;
+}
