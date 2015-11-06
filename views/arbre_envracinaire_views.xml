@@ -13,6 +13,18 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="liste_ordree_view">
+            <field name="name">arbre_envracinaire.tree</field>
+            <field name="model">goeland.arbre_envracinaire</field>
+            <field name="arch" type="xml">
+                <tree string="Root environment" default_order="sortorder">
+                    <field name="name" string="Root environment"/>
+                    <field name="sortorder" string="Sort order"/>
+                    <field name="isactive" string="Active"/>
+                </tree>
+            </field>
+        </record>
+
         <record model="ir.actions.act_window" id="arbre_envracinaire_list_action">
             <field name="name">Root environment</field>
             <field name="res_model">goeland.arbre_envracinaire</field>

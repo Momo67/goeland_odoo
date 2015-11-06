@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-<data>
-  <menuitem id="main_goeland_menu" name="Goeland"/>
-  <menuitem id="thing_menu" name="Things"
-    parent="main_goeland_menu"/>
-</data>
+  <data>
+        <template id="assets_backend" name="goeland_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/goeland/static/src/css/goeland.css"/>
+                <script type="text/javascript" src="/goeland/static/src/js/goeland.js"/>
+            </xpath>
+        </template>
+
+        <menuitem id="main_goeland_menu" name="Goeland"/>
+        <menuitem id="thing_menu" name="Things"
+            parent="main_goeland_menu"/>
+  </data>
 </openerp>

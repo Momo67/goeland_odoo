@@ -48,5 +48,6 @@ Goeland module for managing things like\n
  'application': True,
  'installable': True,
  'auto_install': False,
+ 'qweb': ['static/src/xml/*.xml'],
  }
 

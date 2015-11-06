@@ -33,7 +33,7 @@
             <field name="name">liste_ordree.tree</field>
             <field name="model">goeland.liste_ordree</field>
             <field name="arch" type="xml">
-                <tree string="List">
+                <tree string="List" default_order="sortorder">
                     <field name="name" string="Name"/>
                     <field name="sortorder" string="Sort order"/>
                     <field name="isactive" string="Active"/>

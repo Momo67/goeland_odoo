@@ -22,7 +22,7 @@
                     <sheet>
                         <group>
                             <field name="name"/>
-                            <field name="description"/>
+                            <field name="description" widget="link"/>
                             <field name="tobechecked_id" widget="selection" string="To be checked"/>
                         </group>
                         <notebook>
@@ -59,9 +59,11 @@
                                     <tree>
                                         <group>
                                             <field name="envracinaire_id"
-                                                   widget="selection"
+                                                   options="{'no_create':True}"
+                                                   widget="SortedList"
                                                    domain="[('isactive','!=',False)]"
-                                                   string="Root environment"/>
+                                                   string="Root environment">
+                                            </field>
                                             <field name="chkenvracinaire_id"
                                                    widget="selection"
                                                    domain="[('isactive','!=',False)]"/>
