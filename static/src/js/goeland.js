@@ -3,6 +3,7 @@ openerp.goeland = function (instance, local)
     var _t = instance.web._t;
         _lt = instance.web._lt;
     var QWeb = instance.web.qweb;
+    var items = [];
 
     instance.link = instance.web.form.AbstractField.extend({
         template: "link",
@@ -38,7 +39,6 @@ openerp.goeland = function (instance, local)
         },
         display_field: function() {
             var self = this;
-            var items = [];
             my_instance = new instance.web.Model('goeland.arbre_envracinaire')
                 .query(['name'])
                 .filter([['isactive', '=', true]])
@@ -46,11 +46,11 @@ openerp.goeland = function (instance, local)
                 .all()
                 .then(function (results){
                     _(results).each(function(item) {
-                        items.push({ name: 'alec', sortorder: 10});
+                       _(items).push(item);
                     });
                 });
-            items.push({ name: 'momo', sortorder: 10});
-            items.push({ name: 'jimi', sortorder: 20});
+            //items.push({ name: 'momo', sortorder: 10});
+            //items.push({ name: 'jimi', sortorder: 20});
             self.$el.html(QWeb.render('List', {widget: this, items: items}));
         },
         render_value: function() {
