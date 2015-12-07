@@ -30,12 +30,11 @@
                 <p><t t-esc="item.name"/></p>
             </t>
             -->
-            <t t-foreach="items" t-as="item">
-                <p><t t-esc="item.name"/></p>
-            </t>
-            <!--
-            <p><t t-esc="item.name"/></p>
-            -->
+            <select id="my_select">
+                <t t-foreach="items" t-as="item">
+                    <option class="select_opt" t-att-value="item.idgoeland"><t t-esc="item.name"/></option>
+                </t>
+            </select>
         </div>
     </t>
 </templates>

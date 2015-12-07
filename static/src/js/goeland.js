@@ -25,6 +25,9 @@ openerp.goeland = function (instance, local)
             this._super(view, code);
         },
         */
+        events: {
+            'change #my_select': 'my_select_change',
+        },
         init: function() {
             this._super.apply(this, arguments);
             this.set("value", "");
@@ -40,21 +43,24 @@ openerp.goeland = function (instance, local)
         display_field: function() {
             var self = this;
             my_instance = new instance.web.Model('goeland.arbre_envracinaire')
-                .query(['name'])
+                .query(['name','idgoeland','sortorder'])
                 .filter([['isactive', '=', true]])
-                .limit(10)
+                //.limit(10)
+                .order_by('sortorder')
                 .all()
                 .then(function (results){
                     _(results).each(function(item) {
                        _(items).push(item);
                     });
                 });
-            //items.push({ name: 'momo', sortorder: 10});
-            //items.push({ name: 'jimi', sortorder: 20});
             self.$el.html(QWeb.render('List', {widget: this, items: items}));
         },
         render_value: function() {
             this.$("input").val("999");
+        },
+        my_select_change: function(event) {
+            var self = this;
+            alert("Appel de my_select_change: " + event.target.options[event.target.selectedIndex].text);
         }
     });
 
@@ -81,3 +87,4 @@ openerp.goeland = function (instance, local)
         'goeland.homepage', 'instance.goeland.HomePage');
 
 }
+

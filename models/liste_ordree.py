@@ -8,5 +8,5 @@ class ListeOrdree(models.Model):
     name = fields.Char(string='Name', required=True)
     idgoeland = fields.Integer(string='Id Goeland')
     sortorder = fields.Integer(string='Sort order', required=True)
-    isactive = fields.Boolean(string='Is active', required=True)
+    isactive = fields.Boolean(string='Is active', required=False)
 
